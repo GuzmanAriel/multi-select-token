@@ -46,14 +46,14 @@ const App = () => {
   };
 
   return (
-    <div className="gv__container">
-      <div className="gv__form__item">
-        <div className="gv__form__label" id="gradesTaughtLabel">
+    <div className="ms__container">
+      <div className="ms__form__item">
+        <div className="ms__form__label" id="gradesTaughtLabel">
           Grades Taught *
         </div>
-        <div className="gv__form__checkbox-dropdown">
+        <div className="ms__form__checkbox-dropdown">
           <div
-            className="gv__select-input__input-wrapper gv__form__checkbox-dropdown-select"
+            className="ms__select-input__input-wrapper"
             onClick={toggleDropdownVisibility}
             aria-haspopup="true"
             aria-controls="checkbox-list"
@@ -61,17 +61,17 @@ const App = () => {
             role="combobox"
             tabIndex="0"
           >
-            <div className="gv__select-input__field gv__form__field">
+            <div className="ms__select-input__field">
               {selectedOptions.length == 0 ? (
                 <span
-                  className="js-default-label"
+                  className="ms__default-label"
                   aria-labelledby="checkbox-dropdown"
                 >
                   {" "}
                   Select Grades
                 </span>
               ) : null}
-              <div className="js-token-container">
+              <div className="ms__token-container">
                 {data.FormData.Options.map((item, i) => {
                   if (selectedOptions.includes(item.Value)) {
                     return (
@@ -97,7 +97,7 @@ const App = () => {
           </div>
           {isDropdownOpen && (
             <div
-              className="gv__form__checkbox-dropdown-list"
+              className="ms__form__checkbox-dropdown-list"
               role="checkbox-list"
               id="checkbox-list"
               aria-labelledby="checkbox-dropdown"
@@ -106,7 +106,7 @@ const App = () => {
               {data.FormData.Options.map((item, i) => {
                 return (
                   <div
-                    className="gv__form__item gv__checkbox-layout gv__form__item--checkbox"
+                    className="ms__form__item--checkbox"
                     key={`grades-taught-${i}`}
                     id={`grades-taught-${i}`}
                     onClick={(e) => {
@@ -124,8 +124,9 @@ const App = () => {
                     <input
                       type="checkbox"
                       data-type="checkbox"
+                      name="gradesTaughtInput"
                       id={`gradesTaught-${item.Text}`}
-                      className="js-class-fieldset-grades-taught-input gv__form__field"
+                      className="js-class-fieldset-grades-taught-input ms__form__field"
                       value={item.Value}
                       data-label-text={item.Text}
                       tabIndex="-1"
@@ -137,8 +138,8 @@ const App = () => {
                       }
                     />
                     <label
-                      className="gv__form__label"
-                      htmlFor="gradesTaught"
+                      className="ms__form__label"
+                      htmlFor={`gradesTaught${item.Text}`}
                       id={`grades-taught-label-${i}`}
                       tabIndex={0}
                     >
