@@ -1,0 +1,53 @@
+
+{
+    "FormData": {
+      "LabelText": "Grades Taught *",
+      "ErrorMessage": "Please select a grade level",
+      "FieldIdentifier": "gradesTaught",
+      "SelectedValues": [
+        
+      ],
+      "Options": [
+        {
+          "Value": "280560000",
+          "Text": "K-5"
+        },
+        {
+          "Value": "280560001",
+          "Text": "6"
+        },
+        {
+          "Value": "280560002",
+          "Text": "7"
+        },
+        {
+          "Value": "280560003",
+          "Text": "8"
+        },
+        {
+          "Value": "280560004",
+          "Text": "9"
+        },
+        {
+          "Value": "280560005",
+          "Text": "10"
+        },
+        {
+          "Value": "280560006",
+          "Text": "11"
+        },
+        {
+          "Value": "280560007",
+          "Text": "12"
+        },
+        {
+          "Value": "280560008",
+          "Text": "Post Secondary"
+        },
+        {
+          "Value": "280560009",
+          "Text": "Not Applicable"
+        }
+      ]
+    }
+  }

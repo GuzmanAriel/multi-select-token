@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ms__container {
+  max-width: 680px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.ms__form__item {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.ms__form__label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 0.6em;
+  text-transform: uppercase;
+}
+
+.ms__form__checkbox-dropdown {
+  cursor: pointer;
+}
+
+.ms__select-input__input-wrapper {
+  position: relative;
+}
+
+.ms__select-input__input-wrapper:after {
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  content: "";
+  height: 0.75em;
   pointer-events: none;
+  position: absolute;
+  bottom: 47%;
+  right: 16px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.75em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ms__select-input__field {
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 6px 35px 6px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+  color: #213245;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ms__form__checkbox-dropdown-list {
+  /* display: none; */
+  position: relative;
+  top: 0;
+  padding: 5px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top: none;
+  box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.25);
 }
 
-.App-link {
-  color: #61dafb;
+.ms__form__checkbox-dropdown-list .ms__form__item--checkbox {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ms__form__item--checkbox .ms__form__field {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ms__form__item--checkbox .ms__form__label {
+  margin-left: 0;
+  padding-left: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.ms__form__item--checkbox .ms__form__label:before {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  content: "";
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+}
+
+.ms__form__item--checkbox .ms__form__label:after {
+  border-left: 2px solid #0f6313;
+  border-bottom: 2px solid #0f6313;
+  content: "";
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: height 250ms, width 250ms 250ms;
+  transition: height 250ms, width 250ms 250ms;
+  width: 0;
+}
+
+.ms__form__error-msg {
+  display: none;
+  color: #e6052a;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.ms__form__item--checkbox[aria-checked="true"] .ms__form__label::after {
+  height: 8px;
+  opacity: 1;
+  width: 14px;
+}
+
+.ms__form__checkbox-dropdown .checkbox-dropdown__token {
+  background: #213245;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 10px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  border: none;
+}
+
+.ms__form__checkbox-dropdown .checkbox-dropdown__token:after {
+  display: inline-block;
+  content: "×";
+  color: #fff;
+  margin-left: 5px;
 }
