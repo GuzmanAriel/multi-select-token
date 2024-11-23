@@ -79,6 +79,15 @@ body {
   margin-bottom: 25px;
 }
 
+.ms__form__checkbox-dropdown-list .ms__form__item--checkbox .ms__form__label:focus-visible, .ms__form__checkbox-dropdown-list .ms__form__item--checkbox:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.ms__form__checkbox-dropdown-list .ms__form__item--checkbox .ms__form__label:focus-visible:before, .ms__form__checkbox-dropdown-list .ms__form__item--checkbox:focus-visible .ms__form__label:before {
+  border: 1px solid #000;
+}
+
 .ms__form__item--checkbox .ms__form__field {
   height: 1px;
   opacity: 0;
@@ -121,11 +130,18 @@ body {
   width: 0;
 }
 
-.ms__form__error-msg {
-  display: none;
-  color: #e6052a;
+.ms__form__msg {
   margin-top: 20px;
   font-weight: bold;
+  display: inline-block;
+}
+
+.ms__form__msg--error {
+  color: #e6052a;
+}
+
+.ms__form__msg--success {
+  color: #0fa61e;
 }
 
 .ms__form__item--checkbox[aria-checked="true"] .ms__form__label::after {
@@ -152,4 +168,27 @@ body {
   content: "×";
   color: #fff;
   margin-left: 5px;
+}
+
+.ms__button {
+  border: 1px solid #213245;
+    border-radius: 0;
+    padding: 8px 20px;
+    background-color: #213245;
+    color: #fff;
+    display: block;
+    font-family: FFDinPro, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2857142857;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    -webkit-transition: .5s;
+    transition: .5s;
+    margin-top: 30px;
+    float: right;
+    cursor: pointer;
 }
